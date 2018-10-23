@@ -1,0 +1,5 @@
+Instantiate repository with README and .gitignore
+Create all default milestones
+Replace milestones across all projects to new names
+Create default project board based on type of repository/project
+Create default issues assigned to type of issue, project board, and milestone

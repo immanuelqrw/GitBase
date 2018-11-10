@@ -55,9 +55,9 @@ labels:
     color: orange
   - name: *DEPLOYMENT
     color: red
+# TODO Add descriptions to milestones
 milestones:
   - name: *PRE-ALPHA
-      description:
     description:
   - name: *ALPHA
     description:

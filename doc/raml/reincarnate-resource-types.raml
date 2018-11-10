@@ -1,0 +1,51 @@
+#%RAML 1.0
+title: Reincarnate API
+version: v0.0.1
+resourceTypes:
+  collection:
+    description: Collection of available <<resourcePathName>> in Reincarnate
+    get:
+      description: Get a list of <<resourcePathName>> based on id.
+      responses:
+        200:
+          body:
+            application/json:
+            # type: <<resourcePathName>>
+    post:
+      description: |
+        Add a new <<resourcePathName|!singularize>> to Reincarnate.
+      body:
+        application/json:
+          type: <<resourcePathName|!singularize>>
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                { "message": "The <<resourcePathName | !singularize>> has been properly entered" }
+            # type: <<resourcePathName | !singularize >>
+  member:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+            # type: <<resourcePathName>>
+    put:
+      responses:
+        200:
+          body:
+            application/json:
+            # type: <<resourcePathName>>
+    patch:
+      responses:
+        200:
+          body:
+            application/json:
+            # type: <<resourcePathName>>
+    delete:
+      responses:
+        200:
+          body:
+            application/json:
+            # type: <<resourcePathName>>

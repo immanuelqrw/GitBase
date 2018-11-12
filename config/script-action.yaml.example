@@ -1,0 +1,6 @@
+createRepository: false
+createUsers: false
+createProjects: false
+createLabels: true
+createMilestones: true
+createIssues: true

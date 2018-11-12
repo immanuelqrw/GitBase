@@ -62,21 +62,46 @@ fun GHRepository.createIssues(issues: List<Issue>, milestoneMapping: Map<Milesto
 fun main(args: Array<String>) {
     // TODO add ~/.github credentials file
     val client: GitHub = GitHub.connect()
-    val githubRepository: GHRepository = createRepository(
-        client = client,
-        name = REPOSITORY_INIT.name,
-        isPrivate = REPOSITORY_INIT.isPrivate,
-        hasEnabledAutoInit = REPOSITORY_INIT.hasEnabledAutoInit,
-        hasEnabledDownloads = REPOSITORY_INIT.hasEnabledDownloads,
-        description = REPOSITORY_INIT.description,
-        language = REPOSITORY_INIT.language,
-        license = REPOSITORY_INIT.license
-    )
+
+    val (createRepository, createUsers, createProjects, createLabels, createMilestones, createIssues) = SCRIPT_ACTION
+
+    val githubRepository: GHRepository = if (createRepository) {
+        createRepository(
+            client = client,
+            name = REPOSITORY_INIT.name,
+            isPrivate = REPOSITORY_INIT.isPrivate,
+            hasEnabledAutoInit = REPOSITORY_INIT.hasEnabledAutoInit,
+            hasEnabledDownloads = REPOSITORY_INIT.hasEnabledDownloads,
+            description = REPOSITORY_INIT.description,
+            language = REPOSITORY_INIT.language,
+            license = REPOSITORY_INIT.license
+        )
+    } else {
+        client.getRepository(REPOSITORY_INIT.name)
+    }
 
     // TODO Create Users?
     // TODO Create Projects
 
-    val githubLabels: List<GHLabel> = githubRepository.createLabels(labels = LABELS)
-    val milestoneMapping: Map<Milestone, GHMilestone> = githubRepository.createMilestones(milestones = MILESTONES)
-    val githubIssues: List<GHIssue> = githubRepository.createIssues(issues = ISSUES, milestoneMapping = milestoneMapping)
+    val githubLabels: List<GHLabel> = if (createLabels) {
+        githubRepository.createLabels(labels = LABELS)
+    } else {
+        LABELS.map { label ->
+            githubRepository.getLabel(label.name)
+        }
+    }
+
+    val milestoneMapping: Map<Milestone, GHMilestone> = if (createMilestones) {
+        githubRepository.createMilestones(milestones = MILESTONES)
+    } else {
+        MILESTONES.withIndex().associate { (index, milestone) ->
+            milestone to githubRepository.getMilestone(index + 1)
+        }
+    }
+
+    val githubIssues: List<GHIssue> = if(createIssues) {
+        githubRepository.createIssues(issues = ISSUES, milestoneMapping = milestoneMapping)
+    } else {
+        githubRepository.getIssues(GHIssueState.ALL)
+    }
 }

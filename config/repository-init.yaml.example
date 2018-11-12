@@ -1,0 +1,7 @@
+name: Test
+isPrivate: false
+hasEnabledAutoInit: true
+hasEnabledDownloads: true
+description: This is a test project
+language: Kotlin
+license: gpl-3.0

@@ -23,6 +23,7 @@ inline fun <reified T> parseObjectFromInput(inputStream: InputStream): T {
 
 val GIT_BASE_CONFIG: GitBaseConfig = loadResourceFromFile("git-base-config.yaml")
 
+val BRANCHES: List<Branch> = GIT_BASE_CONFIG.branches
 val USERS: List<User> = GIT_BASE_CONFIG.users
 val PROJECTS: List<Project> = GIT_BASE_CONFIG.projects
 val LABELS: List<Label> = GIT_BASE_CONFIG.labels

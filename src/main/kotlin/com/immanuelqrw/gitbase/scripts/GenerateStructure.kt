@@ -25,7 +25,15 @@ fun createRepository(
 }
 
 
-// Multiple due to creating defaults
+fun GHRepository.createRefs(branches: List<Branch>): List<GHRef> {
+    return branches.map { branch ->
+        // TODO Get most recent commit
+        val hash: String = this.getBranch("origin/master").shA1
+        this.createRef(branch.name, hash)
+    }
+}
+
+
 fun GHRepository.createLabels(labels: List<Label>): List<GHLabel> {
     return labels.map { label ->
         this.createLabel(label.name, label.color)
@@ -63,7 +71,7 @@ fun main(args: Array<String>) {
     // TODO add ~/.github credentials file
     val client: GitHub = GitHub.connect()
 
-    val (createRepository, createUsers, createProjects, createLabels, createMilestones, createIssues) = SCRIPT_ACTION
+    val (createRepository, createBranches, createUsers, createProjects, createLabels, createMilestones, createIssues) = SCRIPT_ACTION
 
     val githubRepository: GHRepository = if (createRepository) {
         createRepository(
@@ -78,6 +86,14 @@ fun main(args: Array<String>) {
         )
     } else {
         client.getRepository(REPOSITORY_INIT.name)
+    }
+
+    val githubBranches: List<GHRef> = if (createBranches) {
+        githubRepository.createRefs(branches = BRANCHES)
+    } else {
+        BRANCHES.map { branch ->
+            githubRepository.getRef(branch.name)
+        }
     }
 
     // TODO Create Users?

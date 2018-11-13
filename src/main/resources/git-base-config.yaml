@@ -12,6 +12,8 @@ variables:
   - &GPL gpl-3.0
   - &MIT mit
   - &ME immanuelqrw
+branches:
+  - name: develop
 users:
   - name: *ME
 projects:

@@ -1,3 +1,5 @@
 config/*.yaml
 .gradle/
 .idea/
+
+\.DS_Store

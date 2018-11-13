@@ -95,6 +95,7 @@ fun main(args: Array<String>) {
         githubRepository.createMilestones(milestones = MILESTONES)
     } else {
         MILESTONES.withIndex().associate { (index, milestone) ->
+            // TODO Test that this works for milestones
             milestone to githubRepository.getMilestone(index + 1)
         }
     }

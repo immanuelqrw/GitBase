@@ -1,4 +1,3 @@
-# TODO Add more licenses
 variables:
   - &ENHANCEMENT enhancement
   - &TESTING testing
@@ -57,20 +56,17 @@ labels:
     color: orange
   - name: *DEPLOYMENT
     color: red
-# TODO Add descriptions to milestones
 milestones:
   - name: *PRE-ALPHA
-    description:
+    description: Working on basic functionality
   - name: *ALPHA
-    description:
+    description: Finishing Minimum Viable Product
   - name: *BETA
-    description:
+    description: Bug Fixing
   - name: *RELEASE-CANDIDATE
-    description:
+    description: Peer Review
   - name: *INITIAL-RELEASE
-    description:
-# TODO Finish adding issues
-# TODO Consider adding field to Issue which specifies type of project to add to
+    description: Minimum Viable Product
 issues:
   - title: Create SQL structure scripts
     description: Database level scaffolding

@@ -71,7 +71,15 @@ fun main(args: Array<String>) {
     // TODO add ~/.github credentials file
     val client: GitHub = GitHub.connect()
 
-    val (createRepository, createBranches, createUsers, createProjects, createLabels, createMilestones, createIssues) = SCRIPT_ACTION
+    val (
+        createRepository,
+        createBranches,
+        createUsers,
+        createProjects,
+        createLabels,
+        createMilestones,
+        createIssues
+    ) = SCRIPT_ACTION
 
     val githubRepository: GHRepository = if (createRepository) {
         createRepository(

@@ -2,6 +2,7 @@ package com.immanuelqrw.gitbase.models
 
 data class GitBaseConfig(
     val variables: List<String>,
+    val branches: List<Branch>,
     val users: List<User>,
     val projects: List<Project>,
     val labels: List<Label>,

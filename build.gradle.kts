@@ -18,10 +18,12 @@ dependencies {
     compile("com.fasterxml.jackson.module", "jackson-module-kotlin", "2.9.4.1")
     compile("com.fasterxml.jackson.dataformat", "jackson-dataformat-yaml", "2.9.0")
     compile("org.kohsuke", "github-api", "1.95")
-    testCompile("junit", "junit", "4.12")
     testCompile("org.junit.jupiter", "junit-jupiter-api", "5.3.1")
     testCompile("org.junit.jupiter", "junit-jupiter-params", "5.3.1")
     testRuntime("org.junit.jupiter", "junit-jupiter-engine", "5.3.1")
+    testImplementation("org.junit.jupiter", "junit-jupiter-api", "5.3.1")
+    testImplementation("io.mockk", "mockk", "1.8.13")
+    testImplementation("org.amshove.kluent", "kluent", "1.42")
 }
 
 configure<JavaPluginConvention> {

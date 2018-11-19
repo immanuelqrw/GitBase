@@ -1,3 +1,9 @@
+import Configuration.BRANCHES
+import Configuration.ISSUES
+import Configuration.LABELS
+import Configuration.MILESTONES
+import Configuration.REPOSITORY_INIT
+import Configuration.SCRIPT_ACTION
 import com.immanuelqrw.gitbase.domain.*
 import org.kohsuke.github.*
 import com.immanuelqrw.gitbase.models.*

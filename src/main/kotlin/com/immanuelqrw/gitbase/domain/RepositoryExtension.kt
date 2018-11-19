@@ -1,36 +1,50 @@
 package com.immanuelqrw.gitbase.domain
 
-import com.immanuelqrw.gitbase.models.Branch
-import com.immanuelqrw.gitbase.models.Issue
-import com.immanuelqrw.gitbase.models.Label
-import com.immanuelqrw.gitbase.models.Milestone
+import com.immanuelqrw.gitbase.models.*
 import org.kohsuke.github.*
 
+/**
+ * Builds repository builder initialized by [repositoryInit]
+ *
+ * @param client GitHub connection
+ * @return Repository Builder object
+ */
+fun buildRepository(client: GitHub, repositoryInit: RepositoryInit): GHCreateRepositoryBuilder {
+    val repositoryBuilder: GHCreateRepositoryBuilder = client.createRepository(repositoryInit.name)
 
+    return repositoryBuilder
+        .description(repositoryInit.description)
+        .private_(repositoryInit.isPrivate)
+        .autoInit(repositoryInit.hasEnabledAutoInit)
+        .downloads(repositoryInit.hasEnabledDownloads)
+        .gitignoreTemplate(repositoryInit.language)
+        .licenseTemplate(repositoryInit.license)
+}
+
+/**
+ * Creates repository on GitHub initialized by [repositoryInit]
+ *
+ * @param client GitHub connection
+ * @return Repository created
+ */
 fun createRepository(
     client: GitHub,
-    name: String,
-    description: String,
-    isPrivate: Boolean,
-    hasEnabledAutoInit: Boolean,
-    hasEnabledDownloads: Boolean,
-    language: String,
-    license: String
+    repositoryInit: RepositoryInit
 ): GHRepository {
-    val repositoryBuilder: GHCreateRepositoryBuilder = client.createRepository(name)
-
-    repositoryBuilder
-        .description(description)
-        .private_(isPrivate)
-        .autoInit(hasEnabledAutoInit)
-        .downloads(hasEnabledDownloads)
-        .gitignoreTemplate(language)
-        .licenseTemplate(license)
+    val repositoryBuilder: GHCreateRepositoryBuilder = buildRepository(client = client, repositoryInit = repositoryInit)
 
     return repositoryBuilder.create()
 }
 
 
+/**
+ * Creates branches on GitHub
+ *
+ * Parses [branches] to create GitHub branches
+ *
+ * @param branches List of branches to create
+ * @return List of references created
+ */
 fun GHRepository.createRefs(branches: List<Branch>): List<GHRef> {
     return branches.map { branch ->
         // TODO Get most recent commit
@@ -40,6 +54,14 @@ fun GHRepository.createRefs(branches: List<Branch>): List<GHRef> {
 }
 
 
+/**
+ * Creates labels on GitHub
+ *
+ * Parses [labels] to create GitHub labels
+ *
+ * @param labels List of labels to create
+ * @return List of labels created
+ */
 fun GHRepository.createLabels(labels: List<Label>): List<GHLabel> {
     return labels.map { label ->
         this.createLabel(label.name, label.color)
@@ -47,6 +69,14 @@ fun GHRepository.createLabels(labels: List<Label>): List<GHLabel> {
 }
 
 
+/**
+ * Creates milestones on GitHub
+ *
+ * Parses [milestones] to create GitHub milestones
+ *
+ * @param milestones List of milestones to create
+ * @return Map from local milestone to GitHub milestone
+ */
 fun GHRepository.createMilestones(milestones: List<Milestone>): Map<Milestone, GHMilestone> {
     return milestones.associate { milestone ->
         milestone to this.createMilestone(milestone.name, milestone.description)
@@ -54,6 +84,15 @@ fun GHRepository.createMilestones(milestones: List<Milestone>): Map<Milestone, G
 }
 
 
+/**
+ * Creates issues on GitHub
+ *
+ * Parses [issues] to create GitHub issues
+ *
+ * @param issues List of issues to create
+ * @param milestoneMapping Map from local milestone to GitHub milestone
+ * @return List of issues created
+ */
 fun GHRepository.createIssues(issues: List<Issue>, milestoneMapping: Map<Milestone, GHMilestone>): List<GHIssue> {
     return issues.map { issue ->
         val issueBuilder: GHIssueBuilder = this.createIssue(issue.title)

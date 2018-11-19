@@ -11,7 +11,15 @@ import org.kohsuke.github.GHRepository
 import org.kohsuke.github.GitHub
 import org.kohsuke.github.GitHubBuilder
 
-
+/**
+ * Integration Test for RepositoryExtension class
+ *
+ * Tests main functionality of GitBase
+ * @property gitHub GitHub connection
+ * @property repository Test repository
+ * @property propertyFile Test property file to point to correct repository
+ * @property repositoryName Test repository to create
+ */
 @ExtendWith(MockKExtension::class)
 class RepositoryExtensionIT {
     private lateinit var gitHub: GitHub
@@ -23,6 +31,9 @@ class RepositoryExtensionIT {
     // TODO Find example repository name
     private val repositoryName = "test"
 
+    /**
+     * Setup for all integration tests
+     */
     @BeforeAll
     fun setUp() {
         // TODO Delete all test repositories before running tests

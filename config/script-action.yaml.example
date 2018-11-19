@@ -1,7 +1,7 @@
-createRepository: false
-createBranches: false
-createUsers: false
-createProjects: false
-createLabels: true
-createMilestones: true
-createIssues: true
+shouldCreateRepository: false
+shouldCreateBranches: false
+shouldCreateUsers: false
+shouldCreateProjects: false
+shouldCreateLabels: true
+shouldCreateMilestones: true
+shouldCreateIssues: true

@@ -8,7 +8,13 @@ import com.immanuelqrw.gitbase.domain.*
 import org.kohsuke.github.*
 import com.immanuelqrw.gitbase.models.*
 
-
+/**
+ * Creates standardized GitHub repository with related issues, labels, milestones, branches, etc.
+ *
+ * Generates the structure of a standardized GitHub repository by instantiating pieces found through configuration
+ *
+ * @param args Input arguments, currently unused
+ */
 fun main(args: Array<String>) {
     // TODO add ~/.github credentials file
     val client: GitHub = GitHub.connect()
@@ -26,13 +32,7 @@ fun main(args: Array<String>) {
     val githubRepository: GHRepository = if (createRepository) {
         createRepository(
             client = client,
-            name = REPOSITORY_INIT.name,
-            isPrivate = REPOSITORY_INIT.isPrivate,
-            hasEnabledAutoInit = REPOSITORY_INIT.hasEnabledAutoInit,
-            hasEnabledDownloads = REPOSITORY_INIT.hasEnabledDownloads,
-            description = REPOSITORY_INIT.description,
-            language = REPOSITORY_INIT.language,
-            license = REPOSITORY_INIT.license
+            repositoryInit = REPOSITORY_INIT
         )
     } else {
         client.getRepository(REPOSITORY_INIT.name)

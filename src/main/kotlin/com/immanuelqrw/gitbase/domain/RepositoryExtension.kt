@@ -42,6 +42,7 @@ fun createRepository(
  *
  * Parses [branches] to create GitHub branches
  *
+ * @receiver [GHRepository]
  * @param branches List of branches to create
  * @return List of references created
  */
@@ -59,6 +60,7 @@ fun GHRepository.createRefs(branches: List<Branch>): List<GHRef> {
  *
  * Parses [labels] to create GitHub labels
  *
+ * @receiver [GHRepository]
  * @param labels List of labels to create
  * @return List of labels created
  */
@@ -74,6 +76,7 @@ fun GHRepository.createLabels(labels: List<Label>): List<GHLabel> {
  *
  * Parses [milestones] to create GitHub milestones
  *
+ * @receiver [GHRepository]
  * @param milestones List of milestones to create
  * @return Map from local milestone to GitHub milestone
  */
@@ -89,6 +92,7 @@ fun GHRepository.createMilestones(milestones: List<Milestone>): Map<Milestone, G
  *
  * Parses [issues] to create GitHub issues
  *
+ * @receiver [GHRepository]
  * @param issues List of issues to create
  * @param milestoneMapping Map from local milestone to GitHub milestone
  * @return List of issues created

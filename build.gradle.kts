@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
-    compile("com.fasterxml.jackson.module", "jackson-module-kotlin", "2.9.4.1")
+    compile("com.fasterxml.jackson.module", "jackson-module-kotlin", "2.9.7")
     compile("com.fasterxml.jackson.dataformat", "jackson-dataformat-yaml", "2.9.0")
     compile("org.kohsuke", "github-api", "1.95")
     testCompile("org.junit.jupiter", "junit-jupiter-api", "5.3.1")

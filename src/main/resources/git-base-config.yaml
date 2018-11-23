@@ -3,7 +3,7 @@ variables:
   - &TESTING testing
   - &DOCUMENTATION documentation
   - &DEPLOYMENT deployment
-  - &PRE-ALPHA PRE-ALPHA
+  - &PRE-ALPHA Pre-Alpha
   - &ALPHA Alpha
   - &BETA Beta
   - &RELEASE-CANDIDATE Release Candidate
@@ -16,46 +16,39 @@ branches:
 users:
   - name: *ME
 projects:
-  - name: Microservices
+  - title: Microservices
     description:
-  - name: Services
+  - title: Services
     description:
-  - name: REST API
+  - title: REST API
     description:
-  - name: API Wrapper
+  - title: API Wrapper
     description:
-  - name: OAuth2 Integration
+  - title: OAuth2 Integration
     description: External Authentication for REST-APIs
-  - name: Database Configuration
+  - title: Database Configuration
     description: Setup database for use in application
-  - name: Deployment
+  - title: Deployment
     description: Configuration of deployment processes for quick iteration
-  - name: Performance Testing
+  - title: Performance Testing
     description:
-  - name: Stress Testing
+  - title: Stress Testing
     description:
-  - name: Regression Testing
+  - title: Regression Testing
     description:
-  - name: End to End Testing
+  - title: End to End Testing
     description:
-  - name: Data Models
+  - title: Data Models
     description: Build structure for all data models
-  - name: Data Access Layer
+  - title: Data Access Layer
     description: Coordinate access to database
-  - name:
-    description:
-  - name:
-    description:
-  - name:
-    description:
 labels:
-  - name: *ENHANCEMENT
   - name: *TESTING
-    color: purple
+    color: 9400D3
   - name: *DOCUMENTATION
-    color: orange
+    color: FF4500
   - name: *DEPLOYMENT
-    color: red
+    color: 8B0000
 milestones:
   - name: *PRE-ALPHA
     description: Working on basic functionality
@@ -198,11 +191,3 @@ issues:
       description:
     assignee:
       name: *ME
-  # - title:
-  #   description:
-  #   labels:
-  #     - name:
-  #   milestone:
-  #     name:
-  #   assignee:
-  #     name: *ME

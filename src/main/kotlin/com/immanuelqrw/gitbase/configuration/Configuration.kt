@@ -1,5 +1,6 @@
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
+import com.fasterxml.jackson.module.kotlin.*
 import com.immanuelqrw.gitbase.models.*
 import java.io.InputStream
 import java.nio.file.Path
@@ -14,7 +15,7 @@ object Configuration {
     /**
      * Object Mapper used for parsing JSON into data classes
      */
-    private val MAPPER = jacksonObjectMapper()
+    private val MAPPER = ObjectMapper(YAMLFactory()).registerKotlinModule()
 
     /**
      * Loads resource from filename
@@ -51,7 +52,7 @@ object Configuration {
      * @return Data class instance
      */
     private inline fun <reified T> parseObjectFromInput(inputStream: InputStream, objectMapper: ObjectMapper): T {
-        return objectMapper.readValue(inputStream, T::class.java)
+        return objectMapper.readValue(inputStream)
     }
 
 

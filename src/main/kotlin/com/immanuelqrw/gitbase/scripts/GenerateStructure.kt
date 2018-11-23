@@ -16,7 +16,6 @@ import com.immanuelqrw.gitbase.models.*
  * @param args Input arguments, currently unused
  */
 fun main(args: Array<String>) {
-    // TODO add ~/.github credentials file
     val client: GitHub = GitHub.connect()
 
     val (
@@ -38,14 +37,15 @@ fun main(args: Array<String>) {
         client.getRepository(REPOSITORY_INIT.name)
     }
 
-    val githubBranches: List<GHRef> = if (createBranches) {
-        githubRepository.createRefs(branches = BRANCHES)
-    } else {
-        BRANCHES.map { branch ->
-            githubRepository.getRef(branch.name)
-        }
-    }
-
+//    // TODO Fix functionality
+//    val githubBranches: List<GHRef> = if (createBranches) {
+//        githubRepository.createRefs(branches = BRANCHES)
+//    } else {
+//        BRANCHES.map { branch ->
+//            githubRepository.getRef(branch.name)
+//        }
+//    }
+//
     // TODO Create Users?
     // TODO Create Projects
 

@@ -15,6 +15,7 @@ object Configuration {
     /**
      * Object Mapper used for parsing JSON into data classes
      */
+    // TODO Fix Expansion of YAML templates -- or write conversion method
     private val MAPPER = ObjectMapper(YAMLFactory()).registerKotlinModule()
 
     /**

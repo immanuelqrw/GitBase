@@ -34,18 +34,16 @@ fun main(args: Array<String>) {
             repositoryInit = REPOSITORY_INIT
         )
     } else {
-        client.getRepository(REPOSITORY_INIT.name)
+        client.getRepository("${REPOSITORY_INIT.owner}/${REPOSITORY_INIT.name}")
     }
 
-//    // TODO Fix functionality
-//    val githubBranches: List<GHRef> = if (createBranches) {
-//        githubRepository.createRefs(branches = BRANCHES)
-//    } else {
-//        BRANCHES.map { branch ->
-//            githubRepository.getRef(branch.name)
-//        }
-//    }
-//
+    val githubBranches: List<GHRef> = if (createBranches) {
+        githubRepository.createRefs(branches = BRANCHES)
+    } else {
+        BRANCHES.map { branch ->
+            githubRepository.getRef(branch.name)
+        }
+    }
     // TODO Create Users?
     // TODO Create Projects
 

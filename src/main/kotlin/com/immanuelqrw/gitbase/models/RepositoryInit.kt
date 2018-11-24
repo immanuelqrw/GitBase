@@ -3,6 +3,7 @@ package com.immanuelqrw.gitbase.models
 /**
  * Represents initialization of Repository called [name] described by [description]
  *
+ * @property owner Owner of repository
  * @property name
  * @property description
  * @param isPrivate Whether repository is enabledß
@@ -12,6 +13,7 @@ package com.immanuelqrw.gitbase.models
  * @param license License
  */
 data class RepositoryInit(
+    val owner: String,
     val name: String,
     val description: String,
     val isPrivate: Boolean,

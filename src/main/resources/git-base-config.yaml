@@ -12,7 +12,7 @@ variables:
   - &MIT mit
   - &ME immanuelqrw
 branches:
-  - name: develop
+  - name: heads/develop
 users:
   - name: *ME
 projects:

@@ -9,6 +9,8 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
   title: Create SQL structure scripts
 - assignee:
     name: immanuelqrw
@@ -18,6 +20,8 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
   title: Create seed data files
 - assignee:
     name: immanuelqrw
@@ -27,6 +31,8 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
   title: Create initialization scripts
 - assignee:
     name: immanuelqrw
@@ -36,15 +42,24 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
   title: Create RAML files for REST endpoint documentation
 - assignee:
     name: immanuelqrw
   description: Setup for writing issues
   labels:
   - name: enhancement
+  - name: documentation
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
   title: Create CHANGELOG
 - assignee:
     name: immanuelqrw
@@ -58,6 +73,12 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
   title: Create configuration template filling script
 - assignee:
     name: immanuelqrw
@@ -72,6 +93,12 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
   title: Create README
 - assignee:
     name: immanuelqrw
@@ -82,6 +109,9 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - LIB
+  - SCRIPT
   title: Create MANIFEST
 - assignee:
     name: immanuelqrw
@@ -92,6 +122,9 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - LIB
+  - SCRIPT
   title: Create CONTRIBUTING
 - assignee:
     name: immanuelqrw
@@ -102,6 +135,12 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
   title: Create COPYRIGHT
 - assignee:
     name: immanuelqrw
@@ -112,6 +151,8 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
   title: Create UMLs
 - assignee:
     name: immanuelqrw
@@ -122,6 +163,8 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
   title: Create Database UML
 - assignee:
     name: immanuelqrw
@@ -135,6 +178,12 @@ issues:
   milestone:
     description: null
     name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
   title: Set up logging and Create configuration file for it
 labels:
 - color: 9400D3
@@ -199,3 +248,8 @@ variables:
 - gpl-3.0
 - mit
 - immanuelqrw
+- API
+- APP
+- LIB
+- SCRIPT
+- SITE

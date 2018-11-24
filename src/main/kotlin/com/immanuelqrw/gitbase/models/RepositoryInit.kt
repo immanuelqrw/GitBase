@@ -11,6 +11,7 @@ package com.immanuelqrw.gitbase.models
  * @param hasEnabledDownloads Whether downloads are enabled
  * @param language Main Repository Language
  * @param license License
+ * @param type Type of Repository
  */
 data class RepositoryInit(
     val owner: String,
@@ -20,5 +21,6 @@ data class RepositoryInit(
     val hasEnabledAutoInit: Boolean,
     val hasEnabledDownloads: Boolean,
     val language: String,
-    val license: String
+    val license: String,
+    val type: RepositoryType
 )

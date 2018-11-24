@@ -11,6 +11,7 @@ package com.immanuelqrw.gitbase.models
  * @property milestone
  * @property project
  * @property assignee
+ * @property repositoryTypes Types of Repositories that [Issue] should be created on
  */
 data class Issue(
     val title: String,
@@ -18,5 +19,6 @@ data class Issue(
     val labels: List<Label>?,
     val milestone: Milestone?,
     val project: Project?,
-    val assignee: User?
+    val assignee: User?,
+    val repositoryTypes: Set<RepositoryType>
 )

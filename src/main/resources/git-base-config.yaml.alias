@@ -11,6 +11,11 @@ variables:
   - &GPL gpl-3.0
   - &MIT mit
   - &ME immanuelqrw
+  - &API API
+  - &APP APP
+  - &LIBRARY LIB
+  - &SCRIPT SCRIPT
+  - &WEBSITE SITE
 branches:
   - name: heads/develop
 users:
@@ -73,6 +78,8 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
   - title: Create seed data files
     description: Loading configuration data into initial state of database
     labels:
@@ -82,6 +89,8 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
   - title: Create initialization scripts
     description: For database instantiation
     labels:
@@ -91,6 +100,8 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
   - title: Create RAML files for REST endpoint documentation
     description: API documentation
     labels:
@@ -100,15 +111,24 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
   - title: Create CHANGELOG
     description: Setup for writing issues
     labels:
       - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
     milestone:
       name: *PRE-ALPHA
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
   - title: Create configuration template filling script
     # TODO Make list of files to create to add to description
     description: |
@@ -121,6 +141,12 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
   - title: Create README
     description: |
       Basic instructions for setting up application
@@ -133,6 +159,12 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
   - title: Create MANIFEST
     description: Record of who has contributed to this project
     labels:
@@ -143,6 +175,9 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *LIBRARY
+      - *SCRIPT
   - title: Create CONTRIBUTING
     description: Instructions on how to work on project
     labels:
@@ -153,6 +188,9 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *LIBRARY
+      - *SCRIPT
   - title: Create COPYRIGHT
     description: Claim ownership to project if there is no license specified
     labels:
@@ -163,6 +201,12 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
   - title: Create UMLs
     description: Diagrams for flow of project application
     labels:
@@ -173,6 +217,8 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
   - title: Create Database UML
     description: Diagrams for flow and connections of data tables
     labels:
@@ -183,6 +229,8 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
   - title: Set up logging and Create configuration file for it
     description: |
       Logging steps taken for future debugging
@@ -194,3 +242,9 @@ issues:
       description:
     assignee:
       name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE

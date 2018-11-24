@@ -94,11 +94,18 @@ fun GHRepository.createMilestones(milestones: List<Milestone>): Map<Milestone, G
  *
  * @receiver [GHRepository]
  * @param issues List of issues to create
+ * @param type [RepositoryType] to create
  * @param milestoneMapping Map from local milestone to GitHub milestone
  * @return List of issues created
  */
-fun GHRepository.createIssues(issues: List<Issue>, milestoneMapping: Map<Milestone, GHMilestone>): List<GHIssue> {
-    return issues.map { issue ->
+fun GHRepository.createIssues(
+    issues: List<Issue>,
+    type: RepositoryType,
+    milestoneMapping: Map<Milestone, GHMilestone>
+): List<GHIssue> {
+    return issues
+        .filter { issue -> type in issue.repositoryTypes }
+        .map { issue ->
         val issueBuilder: GHIssueBuilder = this.createIssue(issue.title)
 
         issueBuilder

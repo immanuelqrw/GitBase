@@ -65,7 +65,7 @@ fun main(args: Array<String>) {
     }
 
     val githubIssues: List<GHIssue> = if(createIssues) {
-        githubRepository.createIssues(issues = ISSUES, milestoneMapping = milestoneMapping)
+        githubRepository.createIssues(issues = ISSUES, type = REPOSITORY_INIT.type, milestoneMapping = milestoneMapping)
     } else {
         githubRepository.getIssues(GHIssueState.ALL)
     }

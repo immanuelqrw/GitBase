@@ -1,0 +1,196 @@
+variables:
+  - &ENHANCEMENT enhancement
+  - &TESTING testing
+  - &DOCUMENTATION documentation
+  - &DEPLOYMENT deployment
+  - &PRE-ALPHA Pre-Alpha
+  - &ALPHA Alpha
+  - &BETA Beta
+  - &RELEASE-CANDIDATE Release Candidate
+  - &INITIAL-RELEASE Initial Release
+  - &GPL gpl-3.0
+  - &MIT mit
+  - &ME immanuelqrw
+branches:
+  - name: heads/develop
+users:
+  - name: *ME
+projects:
+  - title: Microservices
+    description:
+  - title: Services
+    description:
+  - title: REST API
+    description:
+  - title: API Wrapper
+    description:
+  - title: OAuth2 Integration
+    description: External Authentication for REST-APIs
+  - title: Database Configuration
+    description: Setup database for use in application
+  - title: Deployment
+    description: Configuration of deployment processes for quick iteration
+  - title: Performance Testing
+    description:
+  - title: Stress Testing
+    description:
+  - title: Regression Testing
+    description:
+  - title: End to End Testing
+    description:
+  - title: Data Models
+    description: Build structure for all data models
+  - title: Data Access Layer
+    description: Coordinate access to database
+labels:
+  - name: *TESTING
+    color: 9400D3
+    description: Scaffolding, Unit, Integration, Regression, etc.
+  - name: *DOCUMENTATION
+    color: FF4500
+    description: Internal and External Comments and Documents
+  - name: *DEPLOYMENT
+    color: 8B0000
+    description: Configuration and Scripting
+milestones:
+  - name: *PRE-ALPHA
+    description: Working on basic functionality
+  - name: *ALPHA
+    description: Finishing Minimum Viable Product
+  - name: *BETA
+    description: Bug Fixing
+  - name: *RELEASE-CANDIDATE
+    description: Peer Review
+  - name: *INITIAL-RELEASE
+    description: Minimum Viable Product
+issues:
+  - title: Create SQL structure scripts
+    description: Database level scaffolding
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create seed data files
+    description: Loading configuration data into initial state of database
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create initialization scripts
+    description: For database instantiation
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create RAML files for REST endpoint documentation
+    description: API documentation
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create CHANGELOG
+    description: Setup for writing issues
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create configuration template filling script
+    # TODO Make list of files to create to add to description
+    description: |
+      Basic setup for use
+      * database-connection.yaml
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create README
+    description: |
+      Basic instructions for setting up application
+      Includes connections to wiki (if applicable)
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create MANIFEST
+    description: Record of who has contributed to this project
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create CONTRIBUTING
+    description: Instructions on how to work on project
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create COPYRIGHT
+    description: Claim ownership to project if there is no license specified
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create UMLs
+    description: Diagrams for flow of project application
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Create Database UML
+    description: Diagrams for flow and connections of data tables
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+  - title: Set up logging and Create configuration file for it
+    description: |
+      Logging steps taken for future debugging
+      Configure for each expected environment
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME

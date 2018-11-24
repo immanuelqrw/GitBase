@@ -45,10 +45,13 @@ projects:
 labels:
   - name: *TESTING
     color: 9400D3
+    description: Scaffolding, Unit, Integration, Regression, etc.
   - name: *DOCUMENTATION
     color: FF4500
+    description: Internal and External Comments and Documents
   - name: *DEPLOYMENT
     color: 8B0000
+    description: Configuration and Scripting
 milestones:
   - name: *PRE-ALPHA
     description: Working on basic functionality

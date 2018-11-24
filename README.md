@@ -10,3 +10,5 @@ To Start
   - Fill with correct values for repository
 - COPY config/script-action.yaml.example to config/script-action.yaml
   - Fill with correct values for actions to take
+- Execute script in scripts directory named `generate-alias-config.py`
+  - This is intended to create machine readable version of configuration file

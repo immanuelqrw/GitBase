@@ -34,7 +34,7 @@ fun main(args: Array<String>) {
             repositoryInit = REPOSITORY_INIT
         )
     } else {
-        client.getRepository("${REPOSITORY_INIT.owner}/${REPOSITORY_INIT.name}")
+        client.getRepository("${REPOSITORY_INIT.owner}/${REPOSITORY_INIT.name}-${REPOSITORY_INIT.type}")
     }
 
     val githubBranches: List<GHRef> = if (createBranches) {

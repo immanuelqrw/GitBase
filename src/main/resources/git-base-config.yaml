@@ -185,6 +185,232 @@ issues:
   - SCRIPT
   - SITE
   title: Set up logging and Create configuration file for it
+- assignee:
+    name: immanuelqrw
+  description: Connect build to CI/CD processes
+  labels:
+  - name: deployment
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Create CI/CD connection
+- assignee:
+    name: immanuelqrw
+  description: Pre-hook analysis on code before commit
+  labels:
+  - name: enhancement
+  - name: deployment
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Integrate static code analysis
+- assignee:
+    name: immanuelqrw
+  description: Useful for team environments
+  labels:
+  - name: enhancement
+  - name: deployment
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Set up Code Review tooling
+- assignee:
+    name: immanuelqrw
+  description: Allows testing for 3rd party applications
+  labels:
+  - name: enhancement
+  - name: testing
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create test configuration endpoints
+- assignee:
+    name: immanuelqrw
+  description: Filters are needed to pinpoint specific data
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Add filter to GET endpoints
+- assignee:
+    name: immanuelqrw
+  description: null
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create entities
+- assignee:
+    name: immanuelqrw
+  description: null
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create methods to access database
+- assignee:
+    name: immanuelqrw
+  description: Allowing concurrent access
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create async methods to access database
+- assignee:
+    name: immanuelqrw
+  description: null
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Alpha
+  repositoryTypes:
+  - APP
+  title: Set up app connection to App store
+- assignee:
+    name: immanuelqrw
+  description: null
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - APP
+  title: Set up API connection configuration
+- assignee:
+    name: immanuelqrw
+  description: Needed for prototyping design
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - APP
+  title: Develop wireframe
+- assignee:
+    name: immanuelqrw
+  description: Needed to ensure accuracy and consistency
+  labels:
+  - name: enhancement
+  - name: deployment
+  - name: testing
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - LIB
+  title: Set up Code Coverage tool with set minimum percent
+- assignee:
+    name: immanuelqrw
+  description: Modify documentation to show intended code coverage
+  labels:
+  - name: documentation
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - LIB
+  title: Integrate Code Coverage into documentation
+- assignee:
+    name: immanuelqrw
+  description: Add to a repository of useful scripts
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Alpha
+  repositoryTypes:
+  - SCRIPT
+  title: Add to personal website
+- assignee:
+    name: immanuelqrw
+  description: Front-End design for Script
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Alpha
+  repositoryTypes:
+  - SCRIPT
+  title: Find UI template
+- assignee:
+    name: immanuelqrw
+  description: Modifications to make consistent with other scripts
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Alpha
+  repositoryTypes:
+  - SCRIPT
+  title: Configure template
+- assignee:
+    name: immanuelqrw
+  description: Website hosting
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - SITE
+  title: Find hosting
+- assignee:
+    name: immanuelqrw
+  description: Think of website name
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - SITE
+  title: Configure URI
+- assignee:
+    name: immanuelqrw
+  description: Needed for security
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - SITE
+  title: Set up SSL
 labels:
 - color: 9400D3
   description: Scaffolding, Unit, Integration, Regression, etc.
@@ -233,6 +459,10 @@ projects:
   title: Data Models
 - description: Coordinate access to database
   title: Data Access Layer
+- description: View layer
+  title: UI
+- description: Main functionality
+  title: Logic
 users:
 - name: immanuelqrw
 variables:

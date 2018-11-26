@@ -47,6 +47,10 @@ projects:
     description: Build structure for all data models
   - title: Data Access Layer
     description: Coordinate access to database
+  - title: UI
+    description: View layer
+  - title: Logic
+    description: Main functionality
 labels:
   - name: *TESTING
     color: 9400D3
@@ -247,4 +251,230 @@ issues:
       - *APP
       - *LIBRARY
       - *SCRIPT
+      - *WEBSITE
+  - title: Create CI/CD connection
+    description: Connect build to CI/CD processes
+    labels:
+      - name: *DEPLOYMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Integrate static code analysis
+    description: Pre-hook analysis on code before commit
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DEPLOYMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Set up Code Review tooling
+    description: Useful for team environments
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DEPLOYMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Create test configuration endpoints
+    description: Allows testing for 3rd party applications
+    labels:
+      - name: *ENHANCEMENT
+      - name: *TESTING
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Add filter to GET endpoints
+    description: Filters are needed to pinpoint specific data
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create entities
+    description:
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create methods to access database
+    description:
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create async methods to access database
+    description: Allowing concurrent access
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Set up app connection to App store
+    description:
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *APP
+  - title: Set up API connection configuration
+    description:
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *APP
+  - title: Develop wireframe
+    description: Needed for prototyping design
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *APP
+  - title: Set up Code Coverage tool with set minimum percent
+    description: Needed to ensure accuracy and consistency
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DEPLOYMENT
+      - name: *TESTING
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *LIBRARY
+  - title: Integrate Code Coverage into documentation
+    description: Modify documentation to show intended code coverage
+    labels:
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *LIBRARY
+  - title: Add to personal website
+    description: Add to a repository of useful scripts
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *SCRIPT
+  - title: Find UI template
+    description: Front-End design for Script
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *SCRIPT
+  - title: Configure template
+    description: Modifications to make consistent with other scripts
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *SCRIPT
+  - title: Find hosting
+    description: Website hosting
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *WEBSITE
+  - title: Configure URI
+    description: Think of website name
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *WEBSITE
+  - title: Set up SSL
+    description: Needed for security
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
       - *WEBSITE

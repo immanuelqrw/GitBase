@@ -72,22 +72,13 @@ object Configuration {
     val MILESTONES: List<Milestone> = GIT_BASE_CONFIG.milestones
     val ISSUES: List<Issue> = GIT_BASE_CONFIG.issues
 
-
-    /**
-     * Path configuration
-     */
-    private val ROOT_DIR: Path = Paths.get(".").toAbsolutePath()
-    private val CONFIG_DIR: Path = ROOT_DIR.resolve("config")
-
     /**
      * Repository Initialization class initialization from configuration file
      */
-    private val REPOSITORY_INIT_PATH: Path = CONFIG_DIR.resolve("repository-init.yaml")
-    val REPOSITORY_INIT: RepositoryInit = parseObjectFromInput(REPOSITORY_INIT_PATH.toFile().inputStream(), MAPPER)
+    val REPOSITORY_INIT: RepositoryInit = loadResourceFromFile("repository-init.yaml")
 
     /**
      * Script action class initialization from configuration file
      */
-    private val SCRIPT_ACTION_PATH: Path = CONFIG_DIR.resolve("script-action.yaml")
-    val SCRIPT_ACTION: ScriptAction = parseObjectFromInput(SCRIPT_ACTION_PATH.toFile().inputStream(), MAPPER)
+    val SCRIPT_ACTION: ScriptAction = loadResourceFromFile("script-action.yaml")
 }

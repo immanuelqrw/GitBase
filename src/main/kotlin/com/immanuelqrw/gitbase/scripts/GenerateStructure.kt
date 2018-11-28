@@ -34,7 +34,12 @@ fun main(args: Array<String>) {
             repositoryInit = REPOSITORY_INIT
         )
     } else {
-        client.getRepository("${REPOSITORY_INIT.owner}/${REPOSITORY_INIT.name}-${REPOSITORY_INIT.type}")
+        val repositoryName: String = if (REPOSITORY_INIT.hasSuffix) {
+            "${REPOSITORY_INIT.owner}/${REPOSITORY_INIT.name}-${REPOSITORY_INIT.type}"
+        } else {
+            "${REPOSITORY_INIT.owner}/${REPOSITORY_INIT.name}"
+        }
+        client.getRepository(repositoryName)
     }
 
     val githubBranches: List<GHRef> = if (createBranches) {

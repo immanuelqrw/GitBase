@@ -10,7 +10,12 @@ import org.kohsuke.github.*
  * @return Repository Builder object
  */
 fun buildRepository(client: GitHub, repositoryInit: RepositoryInit): GHCreateRepositoryBuilder {
-    val repositoryBuilder: GHCreateRepositoryBuilder = client.createRepository("${repositoryInit.name}-${repositoryInit.type.name.toLowerCase()}")
+    val repositoryName: String = if (repositoryInit.hasSuffix) {
+        "${repositoryInit.name}-${repositoryInit.type.name.toLowerCase()}"
+    } else {
+        repositoryInit.name
+    }
+    val repositoryBuilder: GHCreateRepositoryBuilder = client.createRepository(repositoryName)
 
     return repositoryBuilder
         .description(repositoryInit.description)

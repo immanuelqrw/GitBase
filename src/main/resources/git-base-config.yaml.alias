@@ -1,0 +1,480 @@
+variables:
+  - &ENHANCEMENT enhancement
+  - &TESTING testing
+  - &DOCUMENTATION documentation
+  - &DEPLOYMENT deployment
+  - &PRE-ALPHA Pre-Alpha
+  - &ALPHA Alpha
+  - &BETA Beta
+  - &RELEASE-CANDIDATE Release Candidate
+  - &INITIAL-RELEASE Initial Release
+  - &GPL gpl-3.0
+  - &MIT mit
+  - &ME immanuelqrw
+  - &API API
+  - &APP APP
+  - &LIBRARY LIB
+  - &SCRIPT SCRIPT
+  - &WEBSITE SITE
+branches:
+  - name: heads/develop
+users:
+  - name: *ME
+projects:
+  - title: Microservices
+    description:
+  - title: Services
+    description:
+  - title: REST API
+    description:
+  - title: API Wrapper
+    description:
+  - title: OAuth2 Integration
+    description: External Authentication for REST-APIs
+  - title: Database Configuration
+    description: Setup database for use in application
+  - title: Deployment
+    description: Configuration of deployment processes for quick iteration
+  - title: Performance Testing
+    description:
+  - title: Stress Testing
+    description:
+  - title: Regression Testing
+    description:
+  - title: End to End Testing
+    description:
+  - title: Data Models
+    description: Build structure for all data models
+  - title: Data Access Layer
+    description: Coordinate access to database
+  - title: UI
+    description: View layer
+  - title: Logic
+    description: Main functionality
+labels:
+  - name: *TESTING
+    color: 9400D3
+    description: Scaffolding, Unit, Integration, Regression, etc.
+  - name: *DOCUMENTATION
+    color: FF4500
+    description: Internal and External Comments and Documents
+  - name: *DEPLOYMENT
+    color: 8B0000
+    description: Configuration and Scripting
+milestones:
+  - name: *PRE-ALPHA
+    description: Working on basic functionality
+  - name: *ALPHA
+    description: Finishing Minimum Viable Product
+  - name: *BETA
+    description: Bug Fixing
+  - name: *RELEASE-CANDIDATE
+    description: Peer Review
+  - name: *INITIAL-RELEASE
+    description: Minimum Viable Product
+issues:
+  - title: Create SQL structure scripts
+    description: Database level scaffolding
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create seed data files
+    description: Loading configuration data into initial state of database
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create initialization scripts
+    description: For database instantiation
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create RAML files for REST endpoint documentation
+    description: API documentation
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create CHANGELOG
+    description: Setup for writing issues
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Create configuration template filling script
+    # TODO Make list of files to create to add to description
+    description: |
+      Basic setup for use
+      * database-connection.yaml
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Create README
+    description: |
+      Basic instructions for setting up application
+      Includes connections to wiki (if applicable)
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Create MANIFEST
+    description: Record of who has contributed to this project
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *LIBRARY
+      - *SCRIPT
+  - title: Create CONTRIBUTING
+    description: Instructions on how to work on project
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *LIBRARY
+      - *SCRIPT
+  - title: Create COPYRIGHT
+    description: Claim ownership to project if there is no license specified
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Create UMLs
+    description: Diagrams for flow of project application
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create Database UML
+    description: Diagrams for flow and connections of data tables
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Set up logging and Create configuration file for it
+    description: |
+      Logging steps taken for future debugging
+      Configure for each expected environment
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Create CI/CD connection
+    description: Connect build to CI/CD processes
+    labels:
+      - name: *DEPLOYMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Integrate static code analysis
+    description: Pre-hook analysis on code before commit
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DEPLOYMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Set up Code Review tooling
+    description: Useful for team environments
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DEPLOYMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+      - *APP
+      - *LIBRARY
+      - *SCRIPT
+      - *WEBSITE
+  - title: Create test configuration endpoints
+    description: Allows testing for 3rd party applications
+    labels:
+      - name: *ENHANCEMENT
+      - name: *TESTING
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Add filter to GET endpoints
+    description: Filters are needed to pinpoint specific data
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create entities
+    description:
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create methods to access database
+    description:
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Create async methods to access database
+    description: Allowing concurrent access
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *API
+  - title: Set up app connection to App store
+    description:
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *APP
+  - title: Set up API connection configuration
+    description:
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *APP
+  - title: Develop wireframe
+    description: Needed for prototyping design
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *APP
+  - title: Set up Code Coverage tool with set minimum percent
+    description: Needed to ensure accuracy and consistency
+    labels:
+      - name: *ENHANCEMENT
+      - name: *DEPLOYMENT
+      - name: *TESTING
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *LIBRARY
+  - title: Integrate Code Coverage into documentation
+    description: Modify documentation to show intended code coverage
+    labels:
+      - name: *DOCUMENTATION
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *LIBRARY
+  - title: Add to personal website
+    description: Add to a repository of useful scripts
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *SCRIPT
+  - title: Find UI template
+    description: Front-End design for Script
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *SCRIPT
+  - title: Configure template
+    description: Modifications to make consistent with other scripts
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *SCRIPT
+  - title: Find hosting
+    description: Website hosting
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *WEBSITE
+  - title: Configure URI
+    description: Think of website name
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *WEBSITE
+  - title: Set up SSL
+    description: Needed for security
+    labels:
+      - name: *ENHANCEMENT
+    milestone:
+      name: *PRE-ALPHA
+      description:
+    assignee:
+      name: *ME
+    repositoryTypes:
+      - *WEBSITE

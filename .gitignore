@@ -3,3 +3,9 @@ config/*.yaml
 .idea/
 
 \.DS_Store
+
+out/
+
+src/main/resources/repository-init\.yaml
+
+src/main/resources/script-action\.yaml

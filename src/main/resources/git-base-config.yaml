@@ -1,208 +1,485 @@
-variables:
-  - &ENHANCEMENT enhancement
-  - &TESTING testing
-  - &DOCUMENTATION documentation
-  - &DEPLOYMENT deployment
-  - &PRE-ALPHA PRE-ALPHA
-  - &ALPHA Alpha
-  - &BETA Beta
-  - &RELEASE-CANDIDATE Release Candidate
-  - &INITIAL-RELEASE Initial Release
-  - &GPL gpl-3.0
-  - &MIT mit
-  - &ME immanuelqrw
 branches:
-  - name: develop
-users:
-  - name: *ME
-projects:
-  - name: Microservices
-    description:
-  - name: Services
-    description:
-  - name: REST API
-    description:
-  - name: API Wrapper
-    description:
-  - name: OAuth2 Integration
-    description: External Authentication for REST-APIs
-  - name: Database Configuration
-    description: Setup database for use in application
-  - name: Deployment
-    description: Configuration of deployment processes for quick iteration
-  - name: Performance Testing
-    description:
-  - name: Stress Testing
-    description:
-  - name: Regression Testing
-    description:
-  - name: End to End Testing
-    description:
-  - name: Data Models
-    description: Build structure for all data models
-  - name: Data Access Layer
-    description: Coordinate access to database
-  - name:
-    description:
-  - name:
-    description:
-  - name:
-    description:
-labels:
-  - name: *ENHANCEMENT
-  - name: *TESTING
-    color: purple
-  - name: *DOCUMENTATION
-    color: orange
-  - name: *DEPLOYMENT
-    color: red
-milestones:
-  - name: *PRE-ALPHA
-    description: Working on basic functionality
-  - name: *ALPHA
-    description: Finishing Minimum Viable Product
-  - name: *BETA
-    description: Bug Fixing
-  - name: *RELEASE-CANDIDATE
-    description: Peer Review
-  - name: *INITIAL-RELEASE
-    description: Minimum Viable Product
+- name: heads/develop
 issues:
-  - title: Create SQL structure scripts
-    description: Database level scaffolding
-    labels:
-      - name: *ENHANCEMENT
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create seed data files
-    description: Loading configuration data into initial state of database
-    labels:
-      - name: *ENHANCEMENT
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create initialization scripts
-    description: For database instantiation
-    labels:
-      - name: *ENHANCEMENT
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create RAML files for REST endpoint documentation
-    description: API documentation
-    labels:
-      - name: *ENHANCEMENT
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create CHANGELOG
-    description: Setup for writing issues
-    labels:
-      - name: *ENHANCEMENT
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create configuration template filling script
-    # TODO Make list of files to create to add to description
-    description: |
-      Basic setup for use
-      * database-connection.yaml
-    labels:
-      - name: *ENHANCEMENT
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create README
-    description: |
-      Basic instructions for setting up application
-      Includes connections to wiki (if applicable)
-    labels:
-      - name: *ENHANCEMENT
-      - name: *DOCUMENTATION
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create MANIFEST
-    description: Record of who has contributed to this project
-    labels:
-      - name: *ENHANCEMENT
-      - name: *DOCUMENTATION
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create CONTRIBUTING
-    description: Instructions on how to work on project
-    labels:
-      - name: *ENHANCEMENT
-      - name: *DOCUMENTATION
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create COPYRIGHT
-    description: Claim ownership to project if there is no license specified
-    labels:
-      - name: *ENHANCEMENT
-      - name: *DOCUMENTATION
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create UMLs
-    description: Diagrams for flow of project application
-    labels:
-      - name: *ENHANCEMENT
-      - name: *DOCUMENTATION
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Create Database UML
-    description: Diagrams for flow and connections of data tables
-    labels:
-      - name: *ENHANCEMENT
-      - name: *DOCUMENTATION
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  - title: Set up logging and Create configuration file for it
-    description: |
-      Logging steps taken for future debugging
-      Configure for each expected environment
-    labels:
-      - name: *ENHANCEMENT
-    milestone:
-      name: *PRE-ALPHA
-      description:
-    assignee:
-      name: *ME
-  # - title:
-  #   description:
-  #   labels:
-  #     - name:
-  #   milestone:
-  #     name:
-  #   assignee:
-  #     name: *ME
+- assignee:
+    name: immanuelqrw
+  description: Database level scaffolding
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create SQL structure scripts
+- assignee:
+    name: immanuelqrw
+  description: Loading configuration data into initial state of database
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create seed data files
+- assignee:
+    name: immanuelqrw
+  description: For database instantiation
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create initialization scripts
+- assignee:
+    name: immanuelqrw
+  description: API documentation
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create RAML files for REST endpoint documentation
+- assignee:
+    name: immanuelqrw
+  description: Setup for writing issues
+  labels:
+  - name: enhancement
+  - name: documentation
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Create CHANGELOG
+- assignee:
+    name: immanuelqrw
+  description: 'Basic setup for use
+
+    * database-connection.yaml
+
+    '
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Create configuration template filling script
+- assignee:
+    name: immanuelqrw
+  description: 'Basic instructions for setting up application
+
+    Includes connections to wiki (if applicable)
+
+    '
+  labels:
+  - name: enhancement
+  - name: documentation
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Create README
+- assignee:
+    name: immanuelqrw
+  description: Record of who has contributed to this project
+  labels:
+  - name: enhancement
+  - name: documentation
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - LIB
+  - SCRIPT
+  title: Create MANIFEST
+- assignee:
+    name: immanuelqrw
+  description: Instructions on how to work on project
+  labels:
+  - name: enhancement
+  - name: documentation
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - LIB
+  - SCRIPT
+  title: Create CONTRIBUTING
+- assignee:
+    name: immanuelqrw
+  description: Claim ownership to project if there is no license specified
+  labels:
+  - name: enhancement
+  - name: documentation
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Create COPYRIGHT
+- assignee:
+    name: immanuelqrw
+  description: Diagrams for flow of project application
+  labels:
+  - name: enhancement
+  - name: documentation
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create UMLs
+- assignee:
+    name: immanuelqrw
+  description: Diagrams for flow and connections of data tables
+  labels:
+  - name: enhancement
+  - name: documentation
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create Database UML
+- assignee:
+    name: immanuelqrw
+  description: 'Logging steps taken for future debugging
+
+    Configure for each expected environment
+
+    '
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Set up logging and Create configuration file for it
+- assignee:
+    name: immanuelqrw
+  description: Connect build to CI/CD processes
+  labels:
+  - name: deployment
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Create CI/CD connection
+- assignee:
+    name: immanuelqrw
+  description: Pre-hook analysis on code before commit
+  labels:
+  - name: enhancement
+  - name: deployment
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Integrate static code analysis
+- assignee:
+    name: immanuelqrw
+  description: Useful for team environments
+  labels:
+  - name: enhancement
+  - name: deployment
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE
+  title: Set up Code Review tooling
+- assignee:
+    name: immanuelqrw
+  description: Allows testing for 3rd party applications
+  labels:
+  - name: enhancement
+  - name: testing
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create test configuration endpoints
+- assignee:
+    name: immanuelqrw
+  description: Filters are needed to pinpoint specific data
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Add filter to GET endpoints
+- assignee:
+    name: immanuelqrw
+  description: null
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create entities
+- assignee:
+    name: immanuelqrw
+  description: null
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create methods to access database
+- assignee:
+    name: immanuelqrw
+  description: Allowing concurrent access
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - API
+  title: Create async methods to access database
+- assignee:
+    name: immanuelqrw
+  description: null
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Alpha
+  repositoryTypes:
+  - APP
+  title: Set up app connection to App store
+- assignee:
+    name: immanuelqrw
+  description: null
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - APP
+  title: Set up API connection configuration
+- assignee:
+    name: immanuelqrw
+  description: Needed for prototyping design
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - APP
+  title: Develop wireframe
+- assignee:
+    name: immanuelqrw
+  description: Needed to ensure accuracy and consistency
+  labels:
+  - name: enhancement
+  - name: deployment
+  - name: testing
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - LIB
+  title: Set up Code Coverage tool with set minimum percent
+- assignee:
+    name: immanuelqrw
+  description: Modify documentation to show intended code coverage
+  labels:
+  - name: documentation
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - LIB
+  title: Integrate Code Coverage into documentation
+- assignee:
+    name: immanuelqrw
+  description: Add to a repository of useful scripts
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Alpha
+  repositoryTypes:
+  - SCRIPT
+  title: Add to personal website
+- assignee:
+    name: immanuelqrw
+  description: Front-End design for Script
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Alpha
+  repositoryTypes:
+  - SCRIPT
+  title: Find UI template
+- assignee:
+    name: immanuelqrw
+  description: Modifications to make consistent with other scripts
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Alpha
+  repositoryTypes:
+  - SCRIPT
+  title: Configure template
+- assignee:
+    name: immanuelqrw
+  description: Website hosting
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - SITE
+  title: Find hosting
+- assignee:
+    name: immanuelqrw
+  description: Think of website name
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - SITE
+  title: Configure URI
+- assignee:
+    name: immanuelqrw
+  description: Needed for security
+  labels:
+  - name: enhancement
+  milestone:
+    description: null
+    name: Pre-Alpha
+  repositoryTypes:
+  - SITE
+  title: Set up SSL
+labels:
+- color: 9400D3
+  description: Scaffolding, Unit, Integration, Regression, etc.
+  name: testing
+- color: FF4500
+  description: Internal and External Comments and Documents
+  name: documentation
+- color: 8B0000
+  description: Configuration and Scripting
+  name: deployment
+milestones:
+- description: Working on basic functionality
+  name: Pre-Alpha
+- description: Finishing Minimum Viable Product
+  name: Alpha
+- description: Bug Fixing
+  name: Beta
+- description: Peer Review
+  name: Release Candidate
+- description: Minimum Viable Product
+  name: Initial Release
+projects:
+- description: null
+  title: Microservices
+- description: null
+  title: Services
+- description: null
+  title: REST API
+- description: null
+  title: API Wrapper
+- description: External Authentication for REST-APIs
+  title: OAuth2 Integration
+- description: Setup database for use in application
+  title: Database Configuration
+- description: Configuration of deployment processes for quick iteration
+  title: Deployment
+- description: null
+  title: Performance Testing
+- description: null
+  title: Stress Testing
+- description: null
+  title: Regression Testing
+- description: null
+  title: End to End Testing
+- description: Build structure for all data models
+  title: Data Models
+- description: Coordinate access to database
+  title: Data Access Layer
+- description: View layer
+  title: UI
+- description: Main functionality
+  title: Logic
+users:
+- name: immanuelqrw
+variables:
+- enhancement
+- testing
+- documentation
+- deployment
+- Pre-Alpha
+- Alpha
+- Beta
+- Release Candidate
+- Initial Release
+- gpl-3.0
+- mit
+- immanuelqrw
+- API
+- APP
+- LIB
+- SCRIPT
+- SITE

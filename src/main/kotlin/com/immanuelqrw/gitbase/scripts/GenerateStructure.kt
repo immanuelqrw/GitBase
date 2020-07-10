@@ -1,3 +1,5 @@
+package com.immanuelqrw.gitbase.scripts
+
 import Configuration.BRANCHES
 import Configuration.ISSUES
 import Configuration.LABELS
@@ -16,7 +18,7 @@ import com.immanuelqrw.gitbase.models.*
  * @param args Input arguments, currently unused
  */
 fun main(args: Array<String>) {
-    val client: GitHub = GitHub.connect()
+    val client: GitHub = GitHubBuilder.fromPropertyFile().build();
 
     val (
         createRepository,

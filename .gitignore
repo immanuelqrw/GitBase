@@ -9,3 +9,7 @@ out/
 src/main/resources/repository-init\.yaml
 
 src/main/resources/script-action\.yaml
+
+.vscode/
+
+build/

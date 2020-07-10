@@ -3,8 +3,6 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import com.fasterxml.jackson.module.kotlin.*
 import com.immanuelqrw.gitbase.models.*
 import java.io.InputStream
-import java.nio.file.Path
-import java.nio.file.Paths
 
 /**
  * Configuration

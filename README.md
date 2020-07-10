@@ -3,6 +3,8 @@ GitBase
 
 Git Project instantiation scripts
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=immanuelqrw_GitBase&metric=alert_status)](https://sonarcloud.io/dashboard?id=immanuelqrw_GitBase)
+
 To Start
 - Add ~/.github credentials file for access
   - Place token in file

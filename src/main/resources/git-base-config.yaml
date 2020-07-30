@@ -5,7 +5,7 @@ issues:
     name: immanuelqrw
   description: Database level scaffolding
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -16,7 +16,7 @@ issues:
     name: immanuelqrw
   description: Loading configuration data into initial state of database
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -27,7 +27,7 @@ issues:
     name: immanuelqrw
   description: For database instantiation
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -38,7 +38,7 @@ issues:
     name: immanuelqrw
   description: API documentation
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -49,8 +49,8 @@ issues:
     name: immanuelqrw
   description: Setup for writing issues
   labels:
-  - name: enhancement
-  - name: documentation
+  - name: "type: enhancement"
+  - name: "type: documentation"
   milestone:
     description: null
     name: Pre-Alpha
@@ -69,7 +69,7 @@ issues:
 
     '
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -88,8 +88,8 @@ issues:
 
     '
   labels:
-  - name: enhancement
-  - name: documentation
+  - name: "type: enhancement"
+  - name: "type: documentation"
   milestone:
     description: null
     name: Pre-Alpha
@@ -104,8 +104,8 @@ issues:
     name: immanuelqrw
   description: Record of who has contributed to this project
   labels:
-  - name: enhancement
-  - name: documentation
+  - name: "type: enhancement"
+  - name: "type: documentation"
   milestone:
     description: null
     name: Pre-Alpha
@@ -117,8 +117,8 @@ issues:
     name: immanuelqrw
   description: Instructions on how to work on project
   labels:
-  - name: enhancement
-  - name: documentation
+  - name: "type: enhancement"
+  - name: "type: documentation"
   milestone:
     description: null
     name: Pre-Alpha
@@ -130,8 +130,8 @@ issues:
     name: immanuelqrw
   description: Claim ownership to project if there is no license specified
   labels:
-  - name: enhancement
-  - name: documentation
+  - name: "type: enhancement"
+  - name: "type: documentation"
   milestone:
     description: null
     name: Pre-Alpha
@@ -146,8 +146,8 @@ issues:
     name: immanuelqrw
   description: Diagrams for flow of project application
   labels:
-  - name: enhancement
-  - name: documentation
+  - name: "type: enhancement"
+  - name: "type: documentation"
   milestone:
     description: null
     name: Pre-Alpha
@@ -158,8 +158,8 @@ issues:
     name: immanuelqrw
   description: Diagrams for flow and connections of data tables
   labels:
-  - name: enhancement
-  - name: documentation
+  - name: "type: enhancement"
+  - name: "type: documentation"
   milestone:
     description: null
     name: Pre-Alpha
@@ -174,7 +174,7 @@ issues:
 
     '
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -189,7 +189,7 @@ issues:
     name: immanuelqrw
   description: Connect build to CI/CD processes
   labels:
-  - name: deployment
+  - name: "type: deployment"
   milestone:
     description: null
     name: Pre-Alpha
@@ -204,8 +204,8 @@ issues:
     name: immanuelqrw
   description: Pre-hook analysis on code before commit
   labels:
-  - name: enhancement
-  - name: deployment
+  - name: "type: enhancement"
+  - name: "type: deployment"
   milestone:
     description: null
     name: Pre-Alpha
@@ -220,8 +220,8 @@ issues:
     name: immanuelqrw
   description: Useful for team environments
   labels:
-  - name: enhancement
-  - name: deployment
+  - name: "type: enhancement"
+  - name: "type: deployment"
   milestone:
     description: null
     name: Pre-Alpha
@@ -236,7 +236,7 @@ issues:
     name: immanuelqrw
   description: Allows testing for 3rd party applications
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   - name: testing
   milestone:
     description: null
@@ -248,7 +248,7 @@ issues:
     name: immanuelqrw
   description: Filters are needed to pinpoint specific data
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -259,7 +259,7 @@ issues:
     name: immanuelqrw
   description: null
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -270,7 +270,7 @@ issues:
     name: immanuelqrw
   description: null
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -281,7 +281,7 @@ issues:
     name: immanuelqrw
   description: Allowing concurrent access
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -292,7 +292,7 @@ issues:
     name: immanuelqrw
   description: null
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Alpha
@@ -303,7 +303,7 @@ issues:
     name: immanuelqrw
   description: null
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -314,7 +314,7 @@ issues:
     name: immanuelqrw
   description: Needed for prototyping design
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -325,9 +325,9 @@ issues:
     name: immanuelqrw
   description: Needed to ensure accuracy and consistency
   labels:
-  - name: enhancement
-  - name: deployment
-  - name: testing
+  - name: "type: enhancement"
+  - name: "type: deployment"
+  - name: "type: maintenance"
   milestone:
     description: null
     name: Pre-Alpha
@@ -338,7 +338,7 @@ issues:
     name: immanuelqrw
   description: Modify documentation to show intended code coverage
   labels:
-  - name: documentation
+  - name: "type: documentation"
   milestone:
     description: null
     name: Pre-Alpha
@@ -349,7 +349,7 @@ issues:
     name: immanuelqrw
   description: Add to a repository of useful scripts
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Alpha
@@ -360,7 +360,7 @@ issues:
     name: immanuelqrw
   description: Front-End design for Script
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Alpha
@@ -371,7 +371,7 @@ issues:
     name: immanuelqrw
   description: Modifications to make consistent with other scripts
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Alpha
@@ -382,7 +382,7 @@ issues:
     name: immanuelqrw
   description: Website hosting
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -393,7 +393,7 @@ issues:
     name: immanuelqrw
   description: Think of website name
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -404,7 +404,7 @@ issues:
     name: immanuelqrw
   description: Needed for security
   labels:
-  - name: enhancement
+  - name: "type: enhancement"
   milestone:
     description: null
     name: Pre-Alpha
@@ -463,10 +463,6 @@ projects:
 users:
 - name: immanuelqrw
 variables:
-- enhancement
-- testing
-- documentation
-- deployment
 - Pre-Alpha
 - Alpha
 - Beta

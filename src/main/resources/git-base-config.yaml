@@ -415,9 +415,6 @@ labels:
 - color: 9400D3
   description: Scaffolding, Unit, Integration, Regression, etc.
   name: testing
-- color: FF4500
-  description: Internal and External Comments and Documents
-  name: documentation
 - color: 8B0000
   description: Configuration and Scripting
   name: deployment

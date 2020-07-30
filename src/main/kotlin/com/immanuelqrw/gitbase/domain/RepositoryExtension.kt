@@ -71,7 +71,7 @@ fun GHRepository.createRefs(branches: List<Branch>): List<GHRef> {
  */
 fun GHRepository.createLabels(labels: List<Label>): List<GHLabel> {
     return labels.map { label ->
-        this.createLabel(label.name, label.color)
+        this.createLabel(label.name, label.color, label.description)
     }
 }
 
@@ -86,8 +86,8 @@ fun GHRepository.createLabels(labels: List<Label>): List<GHLabel> {
  * @return Map from local milestone to GitHub milestone
  */
 fun GHRepository.createMilestones(milestones: List<Milestone>): Map<Milestone, GHMilestone> {
-    return milestones.associate { milestone ->
-        milestone to this.createMilestone(milestone.name, milestone.description)
+    return milestones.associateWith {milestone ->
+        this.createMilestone(milestone.name, milestone.description)
     }
 }
 

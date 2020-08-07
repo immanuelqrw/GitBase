@@ -59,6 +59,7 @@ object Configuration {
      * GitBase Configuration data class instance loaded from data file
      */
     private val GIT_BASE_CONFIG: GitBaseConfig = loadResourceFromFile("git-base-config.yaml")
+    private val EXTRA_CONFIG: GitBaseConfig = loadResourceFromFile("extra-config.yaml")
 
     /**
      * Configuration constants for repository
@@ -69,6 +70,7 @@ object Configuration {
     val LABELS: List<Label> = GIT_BASE_CONFIG.labels
     val MILESTONES: List<Milestone> = GIT_BASE_CONFIG.milestones
     val ISSUES: List<Issue> = GIT_BASE_CONFIG.issues
+    val EXTRA_ISSUES: List<Issue> = EXTRA_CONFIG.issues
 
     /**
      * Repository Initialization class initialization from configuration file

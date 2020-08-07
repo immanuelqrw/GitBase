@@ -1,6 +1,7 @@
 package com.immanuelqrw.gitbase.scripts
 
 import Configuration.BRANCHES
+import Configuration.EXTRA_ISSUES
 import Configuration.ISSUES
 import Configuration.LABELS
 import Configuration.MILESTONES
@@ -26,8 +27,11 @@ fun main(args: Array<String>) {
         createUsers,
         createProjects,
         createLabels,
+        removeLabels,
         createMilestones,
-        createIssues
+        createIssues,
+        removeIssues,
+        shouldCreateExtraIssues
     ) = SCRIPT_ACTION
 
     val githubRepository: GHRepository = if (createRepository) {
@@ -54,6 +58,12 @@ fun main(args: Array<String>) {
     // TODO Create Users?
     // TODO Create Projects
 
+    if (removeLabels) {
+        githubRepository.listLabels().forEach { label: GHLabel ->
+            label.delete()
+        }
+    }
+
     val githubLabels: List<GHLabel> = if (createLabels) {
         githubRepository.createLabels(labels = LABELS)
     } else {
@@ -71,9 +81,22 @@ fun main(args: Array<String>) {
         }
     }
 
-    val githubIssues: List<GHIssue> = if(createIssues) {
+    if (removeIssues) {
+        // - Currently there is no method in the REST API to delete issues
+        githubRepository.listIssues(GHIssueState.OPEN).forEach { issue: GHIssue ->
+            issue.close()
+        }
+    }
+
+    val githubIssues: List<GHIssue> = if (createIssues) {
         githubRepository.createIssues(issues = ISSUES, type = REPOSITORY_INIT.type, milestoneMapping = milestoneMapping)
     } else {
         githubRepository.getIssues(GHIssueState.ALL)
+    }
+
+    val extraIssues: List<GHIssue> = if (shouldCreateExtraIssues) {
+        githubRepository.createIssues(issues = EXTRA_ISSUES, type = REPOSITORY_INIT.type, milestoneMapping = milestoneMapping)
+    } else {
+        listOf()
     }
 }

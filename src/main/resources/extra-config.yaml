@@ -1,0 +1,159 @@
+branches:
+  -
+
+issues:
+  -
+#- assignee:
+#    name: immanuelqrw
+#  description: Setup for writing issues
+#  labels:
+#  - name: "type: enhancement"
+#  - name: "type: documentation"
+#  milestone:
+#    description: null
+#    name: Pre-Alpha
+#  repositoryTypes:
+#  - API
+#  - APP
+#  - LIB
+#  - SCRIPT
+#  - SITE
+#  title: Create CHANGELOG
+
+labels:
+  - name: "[type] bug"
+    color: "e11d21"
+    description: "Something isn't working"
+  - name: "[type] breaking"
+    color: "990000"
+  - name: "[type] maintenance"
+    color: "fbca04"
+  - name: "[type] enhancement"
+    color: "009800"
+  - name: "[type] question"
+    color: "cc317c"
+  - name: "[type] discussion"
+    color: "cc317c"
+  - name: "[type] documentation"
+    color: 207de5
+  - name: "[type] design"
+    color: eb6420
+  - name: "[type] deployment"
+    color: eb6420
+  - name: "[type] security"
+    color: "9909de"
+  - name: "[priority] low"
+    color: 009800
+  - name: "[priority] medium"
+    color: fbca04
+  - name: "[priority] high"
+    color: eb6420
+  - name: "[priority] critical"
+    color: e11d21
+  - name: "[status] good first issue"
+    color: bfe5bf
+  - name: "[status] help wanted"
+    color: bfe5bf
+  - name: "[status] won't fix"
+    color: cccccc
+  - name: "[status] duplicate"
+    color: cccccc
+  - name: "[status] blocked"
+    color: "330000"
+  - name: "[status] abandoned"
+    color: "000000"
+  - name: "[status] in progress"
+    color: "cccccc"
+  - name: "[status] on hold"
+    color: "e99695"
+  - name: "[status] proposal"
+    color: "d4c5f9"
+  - name: "[status] review needed"
+    color: "fbca04"
+  - name: "[effort] 1"
+    color: "00cc44"
+  - name: "[effort] 2"
+    color: "00cc99"
+  - name: "[effort] 3"
+    color: "00ffcc"
+  - name: "[effort] 5"
+    color: "999900"
+  - name: "[effort] 8"
+    color: "ffff00"
+  - name: "[effort] 13"
+    color: "883300"
+  - name: "[work] chaotic"
+    color: "999cd8"
+    description: "Needs heavy design work"
+  - name: "[work] complex"
+    color: "7410d8"
+    description: "Needs moderate design work"
+  - name: "[work] complicated"
+    color: "740260"
+    description: "Needs slight design work"
+  - name: "[work] obvious"
+    color: "08f15f"
+    description: "Needs no design work"
+
+
+milestones:
+  - description: Working on basic functionality
+    name: Pre-Alpha
+  - description: Finishing Minimum Viable Product
+    name: Alpha
+  - description: Bug Fixing
+    name: Beta
+  - description: Peer Review
+    name: Release Candidate
+  - description: Minimum Viable Product
+    name: Initial Release
+
+projects:
+  - description: null
+    title: Microservices
+  - description: null
+    title: Services
+  - description: null
+    title: REST API
+  - description: null
+    title: API Wrapper
+  - description: External Authentication for REST-APIs
+    title: OAuth2 Integration
+  - description: Setup database for use in application
+    title: Database Configuration
+  - description: Configuration of deployment processes for quick iteration
+    title: Deployment
+  - description: null
+    title: Performance Testing
+  - description: null
+    title: Stress Testing
+  - description: null
+    title: Regression Testing
+  - description: null
+    title: End to End Testing
+  - description: Build structure for all data models
+    title: Data Models
+  - description: Coordinate access to database
+    title: Data Access Layer
+  - description: View layer
+    title: UI
+  - description: Main functionality
+    title: Logic
+
+users:
+  - name: immanuelqrw
+
+variables:
+  - Pre-Alpha
+  - Alpha
+  - Beta
+  - Release Candidate
+  - Initial Release
+  - gpl-3.0
+  - mit
+  - immanuelqrw
+  - API
+  - APP
+  - LIB
+  - SCRIPT
+  - SITE

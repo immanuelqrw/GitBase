@@ -8,8 +8,11 @@ package com.immanuelqrw.gitbase.models
  * @property shouldCreateUsers Whether users should be created
  * @property shouldCreateProjects Whether projects should be created
  * @property shouldCreateLabels Whether labels should be created
+ * @property shouldRemoveLabels Whether labels should be removed
  * @property shouldCreateMilestones Whether milestones should be created
  * @property shouldCreateIssues Whether issues should be created
+ * @property shouldRemoveIssues Whether issues should be removed
+ * @property shouldCreateExtraIssues Whether extra issues should be created
  */
 data class ScriptAction(
     val shouldCreateRepository: Boolean,
@@ -17,6 +20,9 @@ data class ScriptAction(
     val shouldCreateUsers: Boolean,
     val shouldCreateProjects: Boolean,
     val shouldCreateLabels: Boolean,
+    val shouldRemoveLabels: Boolean,
     val shouldCreateMilestones: Boolean,
-    val shouldCreateIssues: Boolean
+    val shouldCreateIssues: Boolean,
+    val shouldRemoveIssues: Boolean,
+    val shouldCreateExtraIssues: Boolean
 )

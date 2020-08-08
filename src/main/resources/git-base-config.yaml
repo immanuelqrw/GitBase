@@ -2,9 +2,7 @@ branches:
   - name: heads/develop
 
 issues:
-  - assignee:
-      name: immanuelqrw
-    description: Database level scaffolding
+  - description: Database level scaffolding
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -13,9 +11,7 @@ issues:
     repositoryTypes:
     - API
     title: Create SQL structure scripts
-  - assignee:
-      name: immanuelqrw
-    description: Loading configuration data into initial state of database
+  - description: Loading configuration data into initial state of database
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -24,9 +20,7 @@ issues:
     repositoryTypes:
     - API
     title: Create seed data files
-  - assignee:
-      name: immanuelqrw
-    description: For database instantiation
+  - description: For database instantiation
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -35,9 +29,7 @@ issues:
     repositoryTypes:
     - API
     title: Create initialization scripts
-  - assignee:
-      name: immanuelqrw
-    description: API documentation
+  - description: API documentation
     labels:
     - name: "[type] enhancement"
     - name: "[type] documentation"
@@ -47,9 +39,7 @@ issues:
     repositoryTypes:
     - API
     title: Add Swagger Annotations
-  - assignee:
-      name: immanuelqrw
-    description: Setup for writing issues
+  - description: Setup for writing issues
     labels:
     - name: "[type] enhancement"
     - name: "[type] documentation"
@@ -63,9 +53,7 @@ issues:
     - SCRIPT
     - SITE
     title: Create CHANGELOG
-  - assignee:
-      name: immanuelqrw
-    description: 'Basic setup for use
+  - description: 'Basic setup for use
 
       * database-connection.yaml
 
@@ -82,9 +70,7 @@ issues:
     - SCRIPT
     - SITE
     title: Create configuration template filling script
-  - assignee:
-      name: immanuelqrw
-    description: 'Basic instructions for setting up application
+  - description: 'Basic instructions for setting up application
 
       Includes connections to wiki (if applicable)
 
@@ -102,9 +88,7 @@ issues:
     - SCRIPT
     - SITE
     title: Create README
-  - assignee:
-      name: immanuelqrw
-    description: Record of who has contributed to this project
+  - description: Record of who has contributed to this project
     labels:
     - name: "[type] enhancement"
     - name: "[type] documentation"
@@ -115,9 +99,7 @@ issues:
     - LIB
     - SCRIPT
     title: Create MANIFEST
-  - assignee:
-      name: immanuelqrw
-    description: Instructions on how to work on project
+  - description: Instructions on how to work on project
     labels:
     - name: "[type] enhancement"
     - name: "[type] documentation"
@@ -128,9 +110,7 @@ issues:
     - LIB
     - SCRIPT
     title: Create CONTRIBUTING
-  - assignee:
-      name: immanuelqrw
-    description: Diagrams for flow of project application
+  - description: Diagrams for flow of project application
     labels:
     - name: "[type] enhancement"
     - name: "[type] documentation"
@@ -140,9 +120,7 @@ issues:
     repositoryTypes:
     - API
     title: Create UMLs
-  - assignee:
-      name: immanuelqrw
-    description: Diagrams for flow and connections of data tables
+  - description: Diagrams for flow and connections of data tables
     labels:
     - name: "[type] enhancement"
     - name: "[type] documentation"
@@ -152,9 +130,7 @@ issues:
     repositoryTypes:
     - API
     title: Create Database UML
-  - assignee:
-      name: immanuelqrw
-    description: 'Logging steps taken for future debugging
+  - description: 'Logging steps taken for future debugging
 
       Configure for each expected environment
 
@@ -171,9 +147,7 @@ issues:
     - SCRIPT
     - SITE
     title: Set up logging and Create configuration file for it
-  - assignee:
-      name: immanuelqrw
-    description: Connect build to CI/CD processes
+  - description: Connect build to CI/CD processes
     labels:
     - name: "[type] deployment"
     milestone:
@@ -186,9 +160,7 @@ issues:
     - SCRIPT
     - SITE
     title: Create CI/CD connection
-  - assignee:
-      name: immanuelqrw
-    description: Pre-hook analysis on code before commit
+  - description: Pre-hook analysis on code before commit
     labels:
     - name: "[type] enhancement"
     - name: "[type] deployment"
@@ -202,9 +174,7 @@ issues:
     - SCRIPT
     - SITE
     title: Integrate static code analysis
-  - assignee:
-      name: immanuelqrw
-    description: Allows testing for 3rd party applications
+  - description: Allows testing for 3rd party applications
     labels:
     - name: "[type] enhancement"
     - name: "[type] maintenance"
@@ -214,9 +184,7 @@ issues:
     repositoryTypes:
     - API
     title: Create test configuration endpoints
-  - assignee:
-      name: immanuelqrw
-    description: Filters are needed to pinpoint specific data
+  - description: Filters are needed to pinpoint specific data
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -225,9 +193,7 @@ issues:
     repositoryTypes:
     - API
     title: Add filter to GET endpoints
-  - assignee:
-      name: immanuelqrw
-    description: null
+  - description: null
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -236,9 +202,7 @@ issues:
     repositoryTypes:
     - API
     title: Create entities
-  - assignee:
-      name: immanuelqrw
-    description: null
+  - description: null
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -247,9 +211,7 @@ issues:
     repositoryTypes:
     - API
     title: Create methods to access database
-  - assignee:
-      name: immanuelqrw
-    description: Allowing concurrent access
+  - description: Allowing concurrent access
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -258,9 +220,7 @@ issues:
     repositoryTypes:
     - API
     title: Create async methods to access database
-  - assignee:
-      name: immanuelqrw
-    description: null
+  - description: null
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -269,9 +229,7 @@ issues:
     repositoryTypes:
     - APP
     title: Set up app connection to App store
-  - assignee:
-      name: immanuelqrw
-    description: null
+  - description: null
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -280,9 +238,7 @@ issues:
     repositoryTypes:
     - APP
     title: Set up API connection configuration
-  - assignee:
-      name: immanuelqrw
-    description: Needed for prototyping design
+  - description: Needed for prototyping design
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -291,9 +247,7 @@ issues:
     repositoryTypes:
     - APP
     title: Develop wireframe
-  - assignee:
-      name: immanuelqrw
-    description: Needed to ensure accuracy and consistency
+  - description: Needed to ensure accuracy and consistency
     labels:
     - name: "[type] enhancement"
     - name: "[type] deployment"
@@ -304,9 +258,7 @@ issues:
     repositoryTypes:
     - LIB
     title: Set up Code Coverage tool with set minimum percent
-  - assignee:
-      name: immanuelqrw
-    description: Modify documentation to show intended code coverage
+  - description: Modify documentation to show intended code coverage
     labels:
     - name: "[type] documentation"
     milestone:
@@ -315,9 +267,7 @@ issues:
     repositoryTypes:
     - LIB
     title: Integrate Code Coverage into documentation
-  - assignee:
-      name: immanuelqrw
-    description: Front-End design for Script
+  - description: Front-End design for Script
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -326,9 +276,7 @@ issues:
     repositoryTypes:
     - SCRIPT
     title: Find UI template
-  - assignee:
-      name: immanuelqrw
-    description: Modifications to make consistent with other scripts
+  - description: Modifications to make consistent with other scripts
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -337,9 +285,7 @@ issues:
     repositoryTypes:
     - SCRIPT
     title: Configure template
-  - assignee:
-      name: immanuelqrw
-    description: Website hosting
+  - description: Website hosting
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -348,9 +294,7 @@ issues:
     repositoryTypes:
     - SITE
     title: Find hosting
-  - assignee:
-      name: immanuelqrw
-    description: Needed for security
+  - description: Needed for security
     labels:
     - name: "[type] enhancement"
     milestone:
@@ -480,7 +424,7 @@ projects:
     title: Logic
 
 users:
-  - name: immanuelqrw
+  -
 
 variables:
   - Pre-Alpha
@@ -490,7 +434,6 @@ variables:
   - Initial Release
   - gpl-3.0
   - mit
-  - immanuelqrw
   - API
   - APP
   - LIB

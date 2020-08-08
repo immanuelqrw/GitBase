@@ -308,76 +308,209 @@ labels:
   - name: "[type] bug"
     color: "e11d21"
     description: "Something isn't working"
+    aliases:
+      - bug
+      - "type: bug"
   - name: "[type] breaking"
     color: "990000"
+    description: "This changes an interface/contract"
+    aliases:
+      - breaking
+      - "breaking-change"
+      - "type: breaking"
   - name: "[type] maintenance"
     color: "fbca04"
+    description: "(Scaffolding, Unit, Integration, Regression) Test / Refactor"
+    aliases:
+      - maintenance
+      - refactor
+      - testing
+      - test
+      - "type: maintenance"
   - name: "[type] enhancement"
     color: "009800"
+    description: "New feature or request"
+    aliases:
+      - enhancement
+      - feature
+      - "type: enhancement"
   - name: "[type] question"
     color: "cc317c"
+    description: "Further information is requested"
+    aliases:
+      - question
+      - "type: question"
   - name: "[type] discussion"
     color: "cc317c"
+    description: "Non-design discussion"
+    aliases:
+      - discussion
+      - "type: discussion"
   - name: "[type] documentation"
-    color: "207de5"
+    color: 207de5
+    description: "Improvements or additions to documentation"
+    aliases:
+      - documentation
+      - "type: documentation"
   - name: "[type] design"
-    color: "eb6420"
+    color: eb6420
+    description: "Design discussion"
+    aliases:
+      - design
+      - "type: design"
   - name: "[type] deployment"
-    color: "eb6420"
+    color: eb6420
+    description: "Configuration and Scripting"
+    aliases:
+      - deployment
+      - "type: deployment"
   - name: "[type] security"
     color: "9909de"
+    description: "Security"
+    aliases:
+      - security
+      - "type: security"
   - name: "[priority] low"
-    color: "009800"
+    color: 009800
+    description: "Can be completed when desired"
+    aliases:
+      - "priority: low"
   - name: "[priority] medium"
-    color: "fbca04"
+    color: fbca04
+    description: "Important but not time-sensitive"
+    aliases:
+      - "priority: medium"
   - name: "[priority] high"
-    color: "eb6420"
+    color: eb6420
+    description: "Should be next task"
+    aliases:
+      - "priority: high"
   - name: "[priority] critical"
-    color: "e11d21"
+    color: e11d21
+    description: "Needs to be done ASAP"
+    aliases:
+      - "priority: critical"
   - name: "[status] good first issue"
-    color: "bfe5bf"
+    color: bfe5bf
+    description: "Simple issue for new contributors"
+    aliases:
+      - "beginner-friendly"
+      - beginner
+      - "good first issue"
+      - "good-starter-issue"
+      - "starter-issue"
+      - "status: good starter issue"
+      - "status: good first issue"
   - name: "[status] help wanted"
-    color: "bfe5bf"
+    color: bfe5bf
+    description: "Extra attention is needed"
+    aliases:
+      - "help wanted"
+      - "status: help wanted"
   - name: "[status] won't fix"
-    color: "cccccc"
+    color: cccccc
+    description: "This will not be worked on"
+    aliases:
+      - wontfix
+      - "wont-fix"
+      - "status: won't fix"
   - name: "[status] duplicate"
-    color: "cccccc"
+    color: cccccc
+    description: "Duplicate Issue"
+    aliases:
+      - duplicate
+      - "status: duplicate"
   - name: "[status] blocked"
     color: "330000"
+    description: "Reliant on another issue's completion"
+    aliases:
+      - blocked
+      - "status: blocked"
   - name: "[status] abandoned"
     color: "000000"
+    description: "No longer will be completed"
+    aliases:
+      - abandoned
+      - "status: abandoned"
   - name: "[status] in progress"
     color: "cccccc"
+    description: "Currently working on it"
+    aliases:
+      - "in progress"
+      - "status: in progress"
   - name: "[status] on hold"
     color: "e99695"
+    description: "Delayed"
+    aliases:
+      - "on hold"
+      - "status: on hold"
   - name: "[status] proposal"
     color: "d4c5f9"
+    description: "Feature idea"
+    aliases:
+      - proposal
+      - "status: proposal"
   - name: "[status] review needed"
     color: "fbca04"
+    description: "Request for Senior Engineer to review"
+    aliases:
+      - "review needed"
+      - "status: review needed"
   - name: "[effort] 1"
     color: "00cc44"
+    description: "No effort ~ 1 hour"
+    aliases:
+      - "effort: 1"
   - name: "[effort] 2"
     color: "00cc99"
+    description: "Tiny effort ~ 3 hours"
+    aliases:
+      - "effort: 2"
   - name: "[effort] 3"
     color: "00ffcc"
+    description: "Small Effort ~ 8 hours"
+    aliases:
+      - "effort: 3"
   - name: "[effort] 5"
     color: "999900"
+    description: "Medium Effort ~ 15 hours"
+    aliases:
+      - "effort: 5"
   - name: "[effort] 8"
     color: "ffff00"
+    description: "Large Effort ~ 30 hours"
+    aliases:
+      - "effort: 8"
   - name: "[effort] 13"
     color: "883300"
+    description: "Gigantic Effort ~ 50 hours"
+    aliases:
+      - "effort: 13"
   - name: "[work] chaotic"
     color: "999cd8"
-    description: "Needs heavy design work"
+    description: "Principal level work ~ Design Document required"
+    aliases:
+      - chaotic
+      - "work: chaotic"
   - name: "[work] complex"
     color: "7410d8"
-    description: "Needs moderate design work"
+    description: "Senior Level Work ~ Design Document suggested"
+    aliases:
+      - complex
+      - "work: complex"
   - name: "[work] complicated"
     color: "740260"
-    description: "Needs slight design work"
+    description: "Associate Level Work ~ Should discuss with other Engineers before execution"
+    aliases:
+      - complicated
+      - "work: complicated"
   - name: "[work] obvious"
     color: "08f15f"
-    description: "Needs no design work"
+    description: "Junior Level Work ~ Can be done without planning"
+    aliases:
+      - obvious
+      - "work: obvious"
+
 
 milestones:
   - description: Working on basic functionality

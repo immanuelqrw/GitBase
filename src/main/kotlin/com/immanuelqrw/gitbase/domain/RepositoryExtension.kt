@@ -54,7 +54,7 @@ fun createRepository(
 fun GHRepository.createRefs(branches: List<Branch>): List<GHRef> {
     return branches.map { branch ->
         // TODO Get most recent commit
-        val hash: String = this.getRef("heads/master").`object`.sha
+        val hash: String = this.getRef("heads/main").`object`.sha
         this.createRef("refs/${branch.name}", hash)
     }
 }

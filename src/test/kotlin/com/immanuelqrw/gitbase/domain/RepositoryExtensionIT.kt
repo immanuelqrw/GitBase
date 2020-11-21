@@ -4,6 +4,7 @@ import io.mockk.junit5.MockKExtension
 import org.amshove.kluent.shouldEqual
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Nested
+import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
@@ -20,6 +21,7 @@ import org.kohsuke.github.GitHubBuilder
  * @property propertyFile Test property file to point to correct repository
  * @property repositoryName Test repository to create
  */
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @ExtendWith(MockKExtension::class)
 class RepositoryExtensionIT {
     private lateinit var gitHub: GitHub

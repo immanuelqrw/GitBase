@@ -8,17 +8,18 @@ import Configuration.MILESTONES
 import Configuration.REPOSITORY_INIT
 import Configuration.SCRIPT_ACTION
 import com.immanuelqrw.gitbase.domain.*
-import org.kohsuke.github.*
 import com.immanuelqrw.gitbase.models.*
+import mu.KotlinLogging
+import org.kohsuke.github.*
+
+private val logger = KotlinLogging.logger {}
 
 /**
  * Creates standardized GitHub repository with related issues, labels, milestones, branches, etc.
  *
  * Generates the structure of a standardized GitHub repository by instantiating pieces found through configuration
- *
- * @param args Input arguments, currently unused
  */
-fun main(args: Array<String>) {
+fun main() {
     val client: GitHub = GitHubBuilder.fromPropertyFile().build();
 
     val (
@@ -45,6 +46,9 @@ fun main(args: Array<String>) {
         } else {
             "${REPOSITORY_INIT.owner}/${REPOSITORY_INIT.name}"
         }
+
+        logger.debug { "Repository Name: $repositoryName" }
+
         client.getRepository(repositoryName)
     }
 
@@ -55,6 +59,9 @@ fun main(args: Array<String>) {
             githubRepository.getRef(branch.name)
         }
     }
+
+    logger.debug { "Repository Branches: $githubBranches" }
+
     // TODO Create Users?
     // TODO Create Projects
 

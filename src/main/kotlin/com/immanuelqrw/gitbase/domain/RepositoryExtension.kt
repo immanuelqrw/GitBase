@@ -1,7 +1,10 @@
 package com.immanuelqrw.gitbase.domain
 
 import com.immanuelqrw.gitbase.models.*
+import mu.KotlinLogging
 import org.kohsuke.github.*
+
+private val logger = KotlinLogging.logger {}
 
 /**
  * Builds repository builder initialized by [repositoryInit]
@@ -38,6 +41,8 @@ fun createRepository(
 ): GHRepository {
     val repositoryBuilder: GHCreateRepositoryBuilder = buildRepository(client = client, repositoryInit = repositoryInit)
 
+    logger.info { "Create Repository Input: $repositoryInit" }
+
     return repositoryBuilder.create()
 }
 
@@ -55,6 +60,9 @@ fun GHRepository.createRefs(branches: List<Branch>): List<GHRef> {
     return branches.map { branch ->
         // TODO Get most recent commit
         val hash: String = this.getRef("heads/main").`object`.sha
+
+        logger.debug { "Ref Hash: $hash" }
+
         this.createRef("refs/${branch.name}", hash)
     }
 }
@@ -111,19 +119,19 @@ fun GHRepository.createIssues(
     return issues
         .filter { issue -> type in issue.repositoryTypes }
         .map { issue ->
-        val issueBuilder: GHIssueBuilder = this.createIssue(issue.title)
+            val issueBuilder: GHIssueBuilder = this.createIssue(issue.title)
 
-        issueBuilder
-            .assignee(issue.assignee?.name)
-            .body(issue.description)
-            .milestone(milestoneMapping[issue.milestone])
+            issueBuilder
+                .assignee(issue.assignee?.name)
+                .body(issue.description)
+                .milestone(milestoneMapping[issue.milestone])
 
-        issue.labels?.forEach { label ->
-            issueBuilder.label(label.name)
+            issue.labels?.forEach { label ->
+                issueBuilder.label(label.name)
+            }
+
+            val githubIssue: GHIssue = issueBuilder.create()
+
+            githubIssue
         }
-
-        val githubIssue: GHIssue = issueBuilder.create()
-
-        githubIssue
-    }
 }

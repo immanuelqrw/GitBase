@@ -3,6 +3,9 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import com.fasterxml.jackson.module.kotlin.*
 import com.immanuelqrw.gitbase.models.*
 import java.io.InputStream
+import mu.KotlinLogging
+
+private val logger = KotlinLogging.logger {}
 
 /**
  * Configuration
@@ -37,6 +40,8 @@ object Configuration {
      * @return Data class instance
      */
     private inline fun <reified T> loadResourceFromFile(resourceName: String): T {
+        logger.debug { "Resource: $resourceName" }
+
         val inputStream: InputStream = loadResource(name = resourceName)
         return parseObjectFromInput(inputStream = inputStream, objectMapper = MAPPER)
     }
